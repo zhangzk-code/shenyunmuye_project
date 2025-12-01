@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申允木业 - 全屋定制家居</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/lazy-load.css">
+</head>
+<body data-page="home">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>申允木业</h2>
+                <span>SHENYUNMUYE</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="products.html">产品系列</a></li>
+                <li><a href="cases.html">高定案例</a></li>
+                <li><a href="service.html">定制服务</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <div class="nav-utils">
+                <a href="#" id="backToAdminBtn" class="admin-back-btn" style="display: none; padding: 5px 15px; background: #4f46e5; color: white; text-decoration: none; border-radius: 4px; font-size: 13px; margin-right: 10px; transition: background 0.3s;" title="返回管理后台">管理后台</a>
+                <select class="lang-select">
+                    <option>CN</option>
+                    <option>EN</option>
+                </select>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首页Hero区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>成就人们对美好居家生活的向往</h1>
+                <p>专业全屋定制，打造理想家居空间</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">查看产品</a>
+                    <a href="service.html" class="btn btn-secondary">预约设计</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-content">
+                        <h3>申允木业</h3>
+                        <p>ELEGANCE·优雅</p>
+                        <p class="subtitle">时光深处,美丽盛放</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 二维码区域 -->
+
+    <!-- 产品系列预览 -->
+    <section class="products-preview">
+        <div class="container">
+            <h2 class="section-title">产品系列</h2>
+            <div class="product-series">
+                <div class="series-item">经典系列</div>
+                <div class="series-item">东方美学系列</div>
+                <div class="series-item">现代系列</div>
+                <div class="series-item">轻奢系列</div>
+                <div class="series-item">现代年轻系列</div>
+                <div class="series-item">法式顶奢系列</div>
+            </div>
+            <div class="product-gallery">
+                <!-- 内容将由 content.js 动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section class="cases-preview">
+        <div class="container">
+            <h2 class="section-title">高定案例</h2>
+            <div class="cases-grid">
+                <!-- 内容将由 content.js 动态加载，显示前 3 个案例 -->
+            </div>
+            <div class="text-center">
+                <a href="cases.html" class="btn btn-outline">查看更多案例</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于申允木业</h4>
+                    <p>专业全屋定制家居服务商</p>
+                    <p>成就人们对美好居家生活的向往</p>
+                </div>
+                <div class="footer-section">
+                    <h4>产品系列</h4>
+                    <ul>
+                        <li><a href="products.html">经典系列</a></li>
+                        <li><a href="products.html">现代系列</a></li>
+                        <li><a href="products.html">轻奢系列</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="service.html">定制服务</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>服务热线：400-001-4888</p>
+                    <p>工作时间：周一至周五 8:30-17:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 申允木业. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 浮动侧边栏 - 将由 content.js 动态加载 -->
+    <div class="floating-sidebar">
+        <!-- 内容将由 content.js 动态加载 -->
+    </div>
+
+    <script src="js/image-optimizer.js"></script>
+    <script src="js/lazy-load.js" defer></script>
+    <script src="js/content.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/admin-back.js" defer></script>
+</body>
+</html>
+

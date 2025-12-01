@@ -1,0 +1,259 @@
+/**
+ * CMS系统样式
+ */
+
+/* 预览窗口样式 */
+.preview-container {
+    position: fixed;
+    right: 0;
+    top: 64px;
+    bottom: 0;
+    width: 50%;
+    min-width: 450px;
+    max-width: 1200px;
+    background: var(--card-bg);
+    border-left: 1px solid var(--border);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+
+.preview-container.visible {
+    display: flex;
+}
+
+.preview-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bg);
+}
+
+.preview-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    background: var(--card-bg);
+    cursor: move;
+    user-select: none;
+}
+
+.preview-controls.dragging {
+    cursor: grabbing;
+    opacity: 0.9;
+}
+
+.preview-controls-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.preview-title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.preview-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-light);
+    display: inline-block;
+}
+
+.preview-controls-right {
+    display: flex;
+    gap: 8px;
+}
+
+.preview-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.preview-btn:hover {
+    background: var(--bg-tertiary);
+}
+
+.preview-device-selector {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    background: var(--card-bg);
+}
+
+.device-select {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    background: var(--card-bg);
+}
+
+.preview-content {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #e5e7eb;
+    min-height: 0; /* 允许flex子元素缩小 */
+}
+
+.preview-iframe {
+    border: 8px solid #1f2933;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* 防止被压缩 */
+}
+
+.preview-info {
+    display: flex;
+    gap: 16px;
+    padding: 8px 16px;
+    border-top: 1px solid var(--border);
+    background: var(--card-bg);
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* 顶部导航栏样式 */
+.cms-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cms-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cms-topbar-right {
+    display: flex;
+    gap: 8px;
+}
+
+.cms-page-selector {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background: var(--card-bg);
+    cursor: pointer;
+}
+
+.cms-action-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cms-action-btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.cms-action-btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.cms-action-btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text);
+}
+
+.cms-action-btn-secondary:hover {
+    background: var(--border);
+}
+
+.cms-action-btn-success {
+    background: var(--success);
+    color: white;
+}
+
+.cms-action-btn-success:hover {
+    background: #15803d;
+}
+
+.cms-action-btn-warning {
+    background: var(--warning);
+    color: white;
+}
+
+.cms-action-btn-warning:hover {
+    background: #d97706;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .preview-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        z-index: 2000;
+    }
+
+    .cms-topbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .cms-topbar-right {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .preview-info {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
